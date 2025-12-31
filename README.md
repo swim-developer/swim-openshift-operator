@@ -220,31 +220,35 @@ spec:
 ## Development
 
 # Run locally (outside cluster)
-make run
+`make run`
 
 # Run tests
-make test
+`make test`
 
 # Build container image
-make docker-build IMG=quay.io/yourorg/swim-operator:tag
+`make docker-build IMG=quay.io/yourorg/swim-operator:tag`
 
 # Push image
-make docker-push IMG=quay.io/yourorg/swim-operator:tag
+`make docker-push IMG=quay.io/yourorg/swim-operator:tag`
 
 # Generate bundle for OLM
-make bundle## Uninstall
+`make bundle`
 
-# Delete all CRs first
+## Uninstall
+
+### Delete all CRs first
+```shell
 oc delete swimdnotammockserver --all
 oc delete swimdigitalnotamprovider --all
 oc delete swimdigitalnotamconsumer --all
 oc delete swimdnotammockclient --all
+```
 
-# Undeploy operator
-make undeploy
+### Undeploy operator
+`make undeploy`
 
-# Remove CRDs
-make uninstall
+### Remove CRDs
+`make uninstall`
 
 ## License
 
